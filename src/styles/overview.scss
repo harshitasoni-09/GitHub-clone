@@ -1,0 +1,91 @@
+.overview {
+    width: 870px;
+    flex: 1;
+  
+    .overviewDescription {
+      border: 0.4px solid var(--border-color);
+      padding: 10px;
+      height: 300px;
+      border-radius: 8px;
+      flex-wrap: wrap;
+  
+      & > * {
+        margin: 20px;
+      }
+  
+      p {
+        font-size: 14px;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+    }
+  
+    .line {
+      /* Assuming this mixin is defined elsewhere */
+      @include lines();
+    }
+  
+    .repositories {
+      width: 100%;
+      margin-top: 20px;
+  
+      h2 {
+        margin: 0 0 10px;
+        font-size: 18px;
+        font-weight: 400;
+      }
+  
+      .repositoriesContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+  
+        .repositoriesBox {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+  
+        .repositoryItem {
+          width: calc(50% - 10px); 
+          min-width: 200px;
+          border: 1px solid var(--border-color);
+          border-radius: 8px;
+          margin-bottom: 20px;
+          padding: 16px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+  
+            h4 {
+              margin-bottom: 8px;
+              font-size: 15px;
+              color: var(--text-blue-color);
+            }
+  
+            .repositoriesTop {
+              span {
+                font-size: 14px;
+                border: 1px solid var(--border-color);
+                border-radius: 10px;
+                padding: 4px 8px;
+                margin-left: 350px;
+              }
+            }
+  
+            p {
+              margin-top: 5px;
+              font-size: 14px;
+              margin-left: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+  

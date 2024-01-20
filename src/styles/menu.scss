@@ -1,0 +1,56 @@
+@import "./mainRight";
+
+.menu {
+    background-color: var(--btn-color);
+    position: absolute;
+    top: 44px;
+    right: 30px;
+    border-radius: 10px;
+    border: 1px solid var(--line-color);
+    font-size: 14px;
+    width: 180px;
+    padding: 6px;
+
+    .menuContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            width: 100%;
+            cursor: pointer;
+            padding: 6px 16px;
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+
+            &:last-child {
+                margin-bottom: 8px;
+                padding: 6px 16px 6px;
+            }
+
+            &:hover {
+                background-color: rgb(0, 136, 255);
+                border-radius: 4px;
+            }
+        }
+
+        .lineThree {
+            @include lines;
+            margin: 8px 0;
+        }
+
+        .menuStatus {
+            input {
+                background-color: black;
+                border: 1px solid var(--line-color);
+                border-radius: 4px;
+                padding: 8px;
+                width: 100%; // Ensure the input takes the full width
+            }
+        }
+    }
+}
